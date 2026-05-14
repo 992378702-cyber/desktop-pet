@@ -2,7 +2,7 @@ name: Build macOS App
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
             --add-data "*.mov:." \
             --target-architecture universal2 \
             --clean \
-            pet.py
+            macos_V1.0.py
 
       - name: Zip App
         run: |
